@@ -27,7 +27,7 @@ app.add_middleware(
 MAX_IMAGE_BYTES = 10 * 1024 * 1024  # 10 MB
 
 
-@app.get("/health")
+@app.get("/api/health")
 def health():
     return {"status": "ok"}
 
