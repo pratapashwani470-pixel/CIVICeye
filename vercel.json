@@ -17,25 +17,7 @@
       }
     },
     {
-      "source": "/dashboard",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/authority",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/report",
-      "destination": {
-        "service": "frontend"
-      }
-    },
-    {
-      "source": "/",
+      "source": "/(.*)",
       "destination": {
         "service": "frontend"
       }
