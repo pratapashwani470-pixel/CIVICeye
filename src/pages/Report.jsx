@@ -7,7 +7,7 @@ import AIResultCard from "../components/AIResultCard.jsx";
 import LocationPicker from "../components/LocationPicker.jsx";
 import { analyzeImage, AnalyzeError } from "../utils/api.js";
 import { addComplaint } from "../utils/complaintsStore.js";
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "";
 
 /** Converts a File to a base64 data URL so the image can be persisted to
  * localStorage alongside the rest of the complaint. */
