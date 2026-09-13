@@ -17,7 +17,25 @@
       }
     },
     {
-      "source": "/(.*)",
+      "source": "/dashboard",
+      "destination": {
+        "service": "frontend"
+      }
+    },
+    {
+      "source": "/authority",
+      "destination": {
+        "service": "frontend"
+      }
+    },
+    {
+      "source": "/report",
+      "destination": {
+        "service": "frontend"
+      }
+    },
+    {
+      "source": "/",
       "destination": {
         "service": "frontend"
       }
