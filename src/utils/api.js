@@ -2,7 +2,7 @@
 // Gemini and returns a structured result. The Gemini API key never touches
 // this file or any other frontend code — it lives only in backend/.env.
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+const API_BASE_URL = "";
 
 export class AnalyzeError extends Error {}
 
