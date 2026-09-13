@@ -14,13 +14,7 @@ const SEVERITY_STYLES = {
   Critical: "bg-alert-500 text-white",
 };
 
-function formatDate(isoDate) {
-  return new Date(isoDate).toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-}
+
 
 /**
  * One row in the Authority Dashboard's Priority Queue.
@@ -72,7 +66,12 @@ export default function PriorityQueueCard({ complaint, onSelect, onStatusChange 
 
         <span className="inline-flex items-center gap-1.5">
           <CalendarDays className="h-4 w-4" strokeWidth={2} />
-          {formatDate(complaint.date)}
+          {new Date(complaint.date).toLocaleDateString("en-IN", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+})}
+          
         </span>
       </div>
 

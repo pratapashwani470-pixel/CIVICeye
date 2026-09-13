@@ -25,12 +25,10 @@ const STATUS_ACTION_LABEL = {
 function formatDateTime(isoValue) {
   const parsed = new Date(isoValue);
   if (Number.isNaN(parsed.getTime())) return "Date unavailable";
-  return parsed.toLocaleString(undefined, {
-    year: "numeric",
-    month: "short",
+  return parsed.toLocaleDateString("en-IN", {
     day: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
+    month: "short",
+    year: "numeric",
   });
 }
 
