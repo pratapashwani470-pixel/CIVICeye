@@ -1,9 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Eye, Camera } from "lucide-react";
 import Button from "./Button.jsx";
 
 export default function Navbar() {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   return (
     <header className="sticky top-0 z-40 border-b border-ink-100 bg-paper/90 backdrop-blur">
@@ -16,14 +17,32 @@ export default function Navbar() {
             Civic-Eye
           </span>
         </Link>
-
         <nav className="hidden items-center gap-8 md:flex">
-          <a href="#how-it-works" className="text-sm font-medium text-ink-700 hover:text-civic-700">
-            How it works
-          </a>
-          <a href="#categories" className="text-sm font-medium text-ink-700 hover:text-civic-700">
-            Issue types
-          </a>
+
+        <button
+  type="button"
+  onClick={() => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  }}
+  className="text-sm font-medium text-ink-700 hover:text-civic-700"
+>
+  How it works
+</button>
+          <button
+  type="button"
+  onClick={() => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("categories")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  }}
+  className="text-sm font-medium text-ink-700 hover:text-civic-700"
+>
+  Issue types
+</button>
           <Link
             to="/dashboard"
             className={`text-sm font-medium hover:text-civic-700 ${
